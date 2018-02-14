@@ -36,4 +36,13 @@ public class MovieServiceAdapterIT {
 
         assertThat(movieDetail.isPresent(), is(true));
     }
+
+    @Test
+    public void getMovieById_handlesEmptyResponse() throws Exception {
+        MovieServiceAdapter movieServiceAdapter = new MovieServiceAdapter("https://movie-service.herokuapp.com/");
+
+        Optional<MovieDetail> movieDetail = movieServiceAdapter.getMovieById(20);
+
+        assertThat(movieDetail.isPresent(), is(false));
+    }
 }
