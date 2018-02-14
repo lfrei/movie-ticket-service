@@ -38,7 +38,7 @@ public class MovieRepository {
         movie.setYear(2005);
         movie.setGenre("Action");
         movie.setRatings(asList(
-                new Rating("Internet MovieDetail Database","8.3/10"),
+                new Rating("Internet Movie Database","8.3/10"),
                 new Rating("Rotten Tomatoes","84%")));
 
         return movie;
