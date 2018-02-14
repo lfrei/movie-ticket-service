@@ -19,7 +19,7 @@ public class MovieController {
     }
 
     @GetMapping("/movies/{id}")
-    public MovieDetail getMovie(@PathVariable("id") int id) {
+    public MovieDetail getMovieById(@PathVariable("id") int id) {
         return MovieRepository.findById(id);
     }
 }
